@@ -125,6 +125,9 @@ public class TomeeServer extends AbstractMicroprofileAddon {
             configuration.addChild(systemVariables);
         }
 
+
+      // mavenPlugin.setConfiguration(configuration);
+
     }
 
     private Plugin findMavenPlugin(List<Plugin> plugins) {

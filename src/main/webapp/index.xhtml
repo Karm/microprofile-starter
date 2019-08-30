@@ -34,6 +34,19 @@
       xmlns:pt="http://xmlns.jcp.org/jsf/passthrough"
 >
 
+<f:event type="preRenderView"
+         listener="#{facesContext.externalContext.response.setHeader('X-XSS-Protection', '1; mode=block')}" />
+<f:event type="preRenderView"
+         listener="#{facesContext.externalContext.response.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains')}" />
+<f:event type="preRenderView"
+         listener="#{facesContext.externalContext.response.setHeader('X-Content-Type-Options', 'nosniff')}" />
+<f:event type="preRenderView"
+         listener="#{facesContext.externalContext.response.setHeader('Content-Security-Policy',
+         'default-src: https: font-src \'https://fonts.googleapis.com\';
+         img-src \'self\' https://microprofile.io; style-src \'self\'; frame-ancestors \'none\';')}" />
+<f:event type="preRenderView"
+         listener="#{facesContext.externalContext.response.setHeader('X-Frame-Options', 'DENY')}" />
+
 <h:head>
     <title>Starter | MicroProfile</title>
     <h:outputStylesheet library="css" name="starter-0.9.css"/>

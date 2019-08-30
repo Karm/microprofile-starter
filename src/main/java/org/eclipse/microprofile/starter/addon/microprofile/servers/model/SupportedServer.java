@@ -47,6 +47,13 @@ public enum SupportedServer {
             , "8180" //portServiceB
             , MicroProfileVersion.MP22 // MP Spec for Java 11 support
             )
+    , QUARKUS("quarkus", "Quarkus",
+            Arrays.asList(MicroProfileVersion.MP22, MicroProfileVersion.MP30)
+            , "%s-runner.jar" //jarFileName
+            , "-Dquarkus.http.port=8180" //jarParameters; these are env props, e.g. java -D... or mvn -D...
+            , "8080" //portServiceA
+            , "8180" //portServiceB
+    )
     , LIBERTY("liberty", "Open Liberty",
             Arrays.asList(MicroProfileVersion.MP12, MicroProfileVersion.MP13, MicroProfileVersion.MP14,
                     MicroProfileVersion.MP20, MicroProfileVersion.MP21, MicroProfileVersion.MP22,

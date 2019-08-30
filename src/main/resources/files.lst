@@ -32,6 +32,15 @@ src/main/resources/files/privateKey.pem.tpl
 src/main/resources/files/project-defaults.yml.tpl
 src/main/resources/files/ProtectedController.java.tpl
 src/main/resources/files/publicKey.pem.tpl
+src/main/resources/files/quarkus/application.properties.tpl
+src/main/resources/files/quarkus/ClientController.java.tpl
+src/main/resources/files/quarkus/ConfigTestController.java.tpl
+src/main/resources/files/quarkus/index.html.tpl
+src/main/resources/files/quarkus/MetricController.java.tpl
+src/main/resources/files/quarkus/readme.md.secondary.tpl
+src/main/resources/files/quarkus/readme.md.tpl
+src/main/resources/files/quarkus/service-b/application.properties.tpl
+src/main/resources/files/quarkus/service-b/ProtectedController.java.tpl
 src/main/resources/files/readme.md.secondary.tpl
 src/main/resources/files/readme.md.top.tpl
 src/main/resources/files/readme.md.tpl
