@@ -55,7 +55,7 @@ public class QuarkusServer extends AbstractMicroprofileAddon {
         Map<String, String> variables = model.getVariables();
         // Always present, built-in by default
         variables.put("mp_config", "true");
-        
+
         directoryCreator.removeDirectory(model.getDirectory(true) + "/" + MavenCreator.SRC_MAIN_WEBAPP);
         if (model.hasMainAndSecondaryProject()) {
             directoryCreator.removeDirectory(model.getDirectory(false) + "/" + MavenCreator.SRC_MAIN_WEBAPP);
@@ -96,8 +96,11 @@ public class QuarkusServer extends AbstractMicroprofileAddon {
 
             case NONE:
                 break;
+            case MP32:
+                quarkusVersion = "1.1.1.Final";
+                break;
             case MP30:
-                quarkusVersion = "0.22.0";
+                quarkusVersion = "1.1.1.Final";
                 break;
             case MP22:
                 break;

@@ -54,6 +54,8 @@ public class Logs {
             whiteList = Whitelist.KUMULUZEE.errs;
         } else if (testMethod.contains(Whitelist.TOMEE.name)) {
             whiteList = Whitelist.TOMEE.errs;
+        } else if (testMethod.contains(Whitelist.QUARKUS.name)) {
+            whiteList = Whitelist.QUARKUS.errs;
         } else {
             throw new IllegalArgumentException(
                     "testMethod as matter of convention should always contain lower-case server name, e.g. thorntail");

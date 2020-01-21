@@ -34,7 +34,8 @@ public enum Whitelist {
     }),
     HELIDON("helidon", new String[]{}),
     KUMULUZEE("kumuluzee", new String[]{"Copying error_prone_annotations"}),
-    TOMEE("tomee", new String[]{});
+    TOMEE("tomee", new String[]{}),
+    QUARKUS("quarkus", new String[]{});
 
     public final String name;
     public final String[] errs;
